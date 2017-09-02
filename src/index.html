@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="slick/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="slick/slick/slick-theme.css"/>
+  <link rel="stylesheet" href="fonts.css">
+  <link rel="stylesheet" href="main.css">
+  <title>HTML Portfolio</title>
+</head>
+<body>
+  <div id="darkness"></div>
+  <div id="header">
+    <div class="stats">
+      <div class="stat">
+        <img src=""/>
+      </div>
+      <div class="stat"></div>
+    </div>
+    <div class="infobar">
+      <div class="name">Timur Usmanov</div>
+      <div class="title">Software Developer</div>
+    </div>
+    <div class="avatar">
+      <img src="img/avatar.jpg"/>
+    </div>
+    <div class="lvl">
+      <div class="yo">YO</div>
+      <div class="num">21</div>
+    </div>
+    <div class="nav"></div>
+  </div>
+  <div id="mid"></div>
+  <div id="page">
+    <div class="sections">
+      <div class="section" data-section="Intro">
+        <div class="section-title">INTRO</div>
+        <div class="block bigblock">
+          <p>I work hard to bring whatever piece of software you want, in time you want. I use a variety of languages and tools so you can choose which are suitable for you.</p>
+        </div>
+      </div>
+      <div class="section" data-section="Skills">
+        <div class="section-title">SKILLS</div>
+        <div class="block bigblock">
+          <p>Here is the list of skills I'm selling:</p>
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+          </ul>
+        </div>
+        <div class="block smallblock">
+          <p>Here is the list of skills I'm selling:</p>
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+          </ul>
+        </div>
+      </div>
+      <div class="section" data-section="Contacts">
+        <div class="section-title">CONTACTS</div>
+        <div class="block bigblock">
+          <p>You can contact me here:</p>
+          <a href="https://www.linkedin.com/in/timur-usmanov">LinkedIn</a>
+          <a href="https://github.com/ArchDamned">Git</a>
+        </div>
+      </div>
+    </div>
+    <div class="welcome">Welcome to the official page of mine! Feel free to explore it and share your thoughts <a>here.</a></div>
+  </div>
+  <div id="footer"></div>
+
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="slick/slick/slick.min.js"></script>
+  <script type="text/javascript" src="jquery-mousewheel/jquery.mousewheel.js"></script>
+  <script>
+    $(document).ready(function() {
+	    $('.sections').slick({
+        slidesToShow: 1,
+        arrows: false,
+        dots: true,
+        mobileFirst: true,
+        appendDots: $('.nav'),
+        customPaging : function(slider, i) {
+          var section = $(slider.$slides[i]).data('section');
+          return '<a href="javascript:void(0)">' + section.toUpperCase() + '</a>';
+        },
+      });
+
+      $('.sections').mousewheel(function(e) {
+        if (e.deltaY < 0) {
+          if($(this).slick('slickCurrentSlide') == $(this).find('.slide').length - 1) {
+            return
+          } 
+          e.preventDefault()
+          $(this).slick('slickNext')
+
+        } else {
+          
+          if($(this).slick('slickCurrentSlide') == 0) {
+            return
+          }
+          e.preventDefault()
+          $(this).slick('slickPrev')
+        }
+      });
+    });
+  </script>
+</body>
+</html>
