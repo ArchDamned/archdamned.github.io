@@ -21,8 +21,8 @@ body {
     width: 100vw;
     height: 100vh;
     z-index: 100;
-    background: radial-gradient(rgba(255,0,0,0) 60%,black);
-    pointer-events: none;
+    background: radial-gradient(rgba(255,0,0,0),black);
+    pointer-events: none;   
 }
 
 a{
@@ -37,6 +37,7 @@ a{
     color: #D7D7D7;
     padding-top: 25px;
     border-bottom: 5px groove #3D3E3C;
+    padding-left: 25px;
 }
 
 .infobar {
@@ -100,6 +101,7 @@ a{
 
 .slick-dots {
     bottom: -50px;
+    
 }
 
 .slick-dots a{
@@ -109,7 +111,6 @@ a{
 
 .slick-dots li {
     margin: 0 20px;
-    float: left;
 }
 
 .slick-slide {
