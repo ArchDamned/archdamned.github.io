@@ -21,7 +21,7 @@ body {
     width: 100vw;
     height: 100vh;
     z-index: 100;
-    background: radial-gradient(rgba(255,0,0,0),black);
+    background: radial-gradient(rgba(255,0,0,0) 70%,black);
     pointer-events: none;   
 }
 
