@@ -7,13 +7,18 @@
 }
 
 html {
-    height: 100%;
+    height: 100vh;
 }
 
 body {
-    height: 100%;
+    height: 100vh;
     padding: 0;
     margin: 0;
+}
+
+a{
+    text-decoration: none;
+    color: #D7D7D7;
 }
 
 #darkness {
@@ -25,19 +30,19 @@ body {
     pointer-events: none;   
 }
 
-a{
-    text-decoration: none;
-    color: #D7D7D7;
-}
-
 #header {
-    height: 50px;
+    height: 8vh;
     position: relative;
     background-color: #080401;
     color: #D7D7D7;
     padding-top: 25px;
     border-bottom: 5px groove #3D3E3C;
-    padding-left: 25px;
+}
+
+#header-inside {
+    width: 100%;
+    position: absolute;
+    bottom: 8px;
 }
 
 .infobar {
@@ -87,8 +92,9 @@ a{
 }
 
 #page {
-    height: calc(100vh - 232px);
+    height: calc(100vh - 26vh - 40px);
     background: radial-gradient(#131210 30%, #050100);
+    position: relative;
 }
 
 #page a {
@@ -111,7 +117,7 @@ a{
 .slick-dots li {
     margin: 0 20px;
     float: left;
-    left: 5%;
+    left: 5vw;
 }
 
 .slick-dots .slick-active a {
@@ -126,28 +132,25 @@ a{
 }
 
 .bigblock {
-    width: 500px;
+    width: 35vw;
 }
 
 .smallblock{
-    width: 250px;
+    width: 20vw;
 }
 
 .block {
-    height: 300px;
+    height: 40vh;
     border: 4px groove #605F5F;
     display: inline-block;
     margin: 15px 20px;
     padding: 0 5px;
     color: #FAFAFA;
 }
+
 .block:hover{
     box-shadow: 0 0 20px 0px #20C8F5;
     border: 4px groove #2880A5;
-}
-
-.sections {
-    padding: 0;
 }
 
 .section-title {
@@ -163,14 +166,14 @@ a{
 }
 
 #mid {
-    height: 50px;
+    height: 5vh;
     border-bottom: 5px groove #483912;
     background: radial-gradient(#190F06 20%, #000000);
 }
 
 #footer {
-    height: 100px;
-    width: 100%;
+    height: 13vh;
+    width: 100vw;
     bottom: 0;
     position: absolute;
     background: radial-gradient(#190F06 30%, #000000);
@@ -181,7 +184,9 @@ a{
     height: 30px;
     line-height: 30px;
     font-size: 14px;
-    width: 100%;
+    width: 100vw;
+    position: absolute;
+    bottom: 4vh;
     border-bottom: 3px groove #3D3E3C;
     border-top: 3px groove #3D3E3C;
     text-align: center;
