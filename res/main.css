@@ -122,9 +122,10 @@ a{
 
 .slick-dots .slick-active a {
     font-size: 15px;
-    padding-bottom: 2px;
+    padding-bottom: 3px;
     color: white;
     border-bottom: 2px solid #20C8F5;
+    transition: all 0.2s, border 0s ease 0.2s;
 }
 
 .slick-slide {
@@ -132,25 +133,28 @@ a{
 }
 
 .bigblock {
-    width: 35vw;
+    width: 33vw;
 }
 
 .smallblock{
-    width: 20vw;
+    width: 17vw;
 }
 
 .block {
-    height: 40vh;
+    height: 22vw;
     border: 4px groove #605F5F;
     display: inline-block;
     margin: 15px 20px;
     padding: 0 5px;
     color: #FAFAFA;
+    overflow: hidden;
 }
 
 .block:hover{
     box-shadow: 0 0 20px 0px #20C8F5;
     border: 4px groove #2880A5;
+    transform: scale(1.015);
+    transition: transform 0.2s;
 }
 
 .section-title {
