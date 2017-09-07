@@ -140,7 +140,8 @@
 
     display: inline-block;
 
-    width: 20px;
+    /*Disabled for custom navigation
+    width: 20px;*/
     height: 20px;
     margin: 0 5px;
     padding: 0;

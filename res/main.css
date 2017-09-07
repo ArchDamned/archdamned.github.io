@@ -110,22 +110,30 @@ a{
 }
 
 .slick-dots a{
+    position: relative;
     color: #666563;
-    font-size: 14px;
+    font-size: 15px;
+    transition: all 0.2s ease-in-out, border 0s ease 0.2s;
 }
 
 .slick-dots li {
-    margin: 0 20px;
+    margin: 0 10px;
     float: left;
     left: 5vw;
 }
 
 .slick-dots .slick-active a {
-    font-size: 15px;
-    padding-bottom: 3px;
     color: white;
-    border-bottom: 2px solid #20C8F5;
-    transition: all 0.2s, border 0s ease 0.2s;
+}
+
+.slick-dots .slick-active a:after{
+    height: 4px;
+    margin-top: 1px;
+    display: block;
+    background: #20C8F5;
+    content: '';
+    transform: skew(20deg);
+    width: 102%;
 }
 
 .slick-slide {
@@ -144,7 +152,7 @@ a{
     height: 22vw;
     border: 4px groove #605F5F;
     display: inline-block;
-    margin: 15px 20px;
+    margin: 15px 5px;
     padding: 0 5px;
     color: #FAFAFA;
     overflow: hidden;
@@ -154,18 +162,27 @@ a{
     box-shadow: 0 0 20px 0px #20C8F5;
     border: 4px groove #2880A5;
     transform: scale(1.015);
-    transition: transform 0.2s;
+    transition: transform 0.2s ease-out;
+}
+
+.section {
+    padding: 0 20px;
 }
 
 .section-title {
-    padding-left: 20px;
+    padding-left: 5px;
     display: block;
-    font-size: 1.17em;
+    font-size: 1.3em;
     -webkit-margin-before: 1em;
     -webkit-margin-after: 1em;
     -webkit-margin-start: 0px;
     -webkit-margin-end: 0px;
     font-weight: bold;
+    color: #666563;
+    transition: color 0.4s;
+}
+
+.section:hover .section-title {
     color: #F6F6F6;
 }
 
