@@ -71,7 +71,7 @@ a{
     font-size: 14px;
 }
 
-.avatar img {
+.avatar {
     float: right;
     max-width: 35px;
     max-height: 35px;
@@ -103,6 +103,7 @@ a{
 
 .nav {
     position: relative;
+    display: block;
 }
 
 .slick-dots {
@@ -111,9 +112,13 @@ a{
 
 .slick-dots a{
     position: relative;
-    color: #666563;
+    color: #666666;
     font-size: 15px;
-    transition: all 0.2s ease-in-out, border 0s ease 0.2s;
+    transition: all 0.2s ease-in-out;
+}
+
+.slick-dots a:hover{
+    color: #AAAAAA;
 }
 
 .slick-dots li {
