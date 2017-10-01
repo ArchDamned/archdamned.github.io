@@ -2,7 +2,8 @@
     font-family: HalisGR-Book;
 }
 
-*:focus {
+
+*:focus{
     outline: none;
 }
 
