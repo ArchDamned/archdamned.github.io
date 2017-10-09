@@ -263,10 +263,10 @@ a {
 
 .preloader:after {
 	position: absolute;
-	content: "Loading...";
+	content: attr(load-text);
 	color: #D7D7D7;
 	bottom: -30px;
-	left: 5px;
+	left: 9px;
 	font-size: 20px;
 }
 

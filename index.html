@@ -99,36 +99,36 @@
 	<script type="text/javascript" src="res/lib/slick/slick.min.js"></script>
 	<script type="text/javascript" src="res/lib/mousewheel/jquery.mousewheel.js"></script>
 	<script>
-		$(document).ready(function() {
-			$('.sections').slick({
-				slidesToShow: 1,
-				arrows: false,
-				dots: true,
-				mobileFirst: true,
-				appendDots: $('.nav'),
-				customPaging : function(slider, i) {
-					var section = $(slider.$slides[i]).data('section');
-					return '<a href="javascript:void(0)">' + section.toUpperCase() + '</a>';
-				},
-			}).mousewheel(function(e) {
-				if (e.deltaY < 0) {
-					$(this).slick('slickNext');
-				} else {
-					$(this).slick('slickPrev');
-				}
-			});
-			$(window).on('load resize',function(){
-				if($(window).height() < 600 || $(window).width() < 1100){
-						$('body').children().hide();
-						$('#small_screen_notice').show();
-				} else {
-					$('body').children().show();
-					$('#small_screen_notice').hide();
-				}
-			});
-			$(window).load(function(){
-				$('.loader-container').delay(2000).fadeOut();
-			});
+		$('.sections').slick({
+			slidesToShow: 1,
+			arrows: false,
+			dots: true,
+			mobileFirst: true,
+			appendDots: $('.nav'),
+			customPaging : function(slider, i) {
+				var section = $(slider.$slides[i]).data('section');
+				return '<a href="javascript:void(0)">' + section.toUpperCase() + '</a>';
+			},
+		}).mousewheel(function(e) {
+			if (e.deltaY < 0) {
+				$(this).slick('slickNext');
+			} else {
+				$(this).slick('slickPrev');
+			}
+		});
+		$('.preloader').attr('load-text','Loading...');
+		$(window).on('load', function(){
+			$('.loader-container').delay(2000).fadeOut();
+			$('.preloader').attr('load-text','Loaded!');
+		});
+		$(window).on('load resize',function(){
+			if($(window).height() < 600 || $(window).width() < 1100){
+					$('body').children().hide();
+					$('#small_screen_notice').show();
+			} else {
+				$('body').children().show();
+				$('#small_screen_notice').hide();
+			}
 		});
 	</script>
 </body>
