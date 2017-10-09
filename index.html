@@ -10,6 +10,17 @@
 	<title>GWENT Resume</title>
 </head>
 <body>
+	<div id="small_screen_notice">
+		This page currently is not supporting small screens because of poor responsivity. Please switch to larger screen device and try again. Sorry for inconvenience.
+	</div>
+	<div class="loader-container">
+		<div class="preloader">
+			<div class="loader">
+				<div class="afterloader"></div>
+			</div>
+		</div>
+		<div class="loader-text">Loading...</div>
+	</div>
 	<div id="darkness"></div>
 	<div id="header">
 		<div id="header-inside">
@@ -109,8 +120,15 @@
 			});
 			$(window).on('load resize',function(){
 				if($(window).height() < 600 || $(window).width() < 1100){
-						$(location).attr('href', 'small_screen_notice.html')
+						$('body').children().hide();
+						$('#small_screen_notice').show();
+				} else {
+					$('body').children().show();
+					$('#small_screen_notice').hide();
 				}
+			});
+			$(window).load(function(){
+				$('.loader-container').fadeOut();
 			});
 		});
 	</script>
