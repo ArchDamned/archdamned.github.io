@@ -116,10 +116,10 @@
 				$(this).slick('slickPrev');
 			}
 		});
-		$('.preloader').attr('load-text','Loading...');
+		$('.preloader').attr('load-text','Loading');
 		$(window).on('load', function(){
-			$('.loader-container').delay(2000).fadeOut();
 			$('.preloader').attr('load-text','Loaded!');
+			$('.loader-container').delay(2000).fadeOut().remove();
 		});
 		$(window).on('load resize',function(){
 			if($(window).height() < 600 || $(window).width() < 1100){
